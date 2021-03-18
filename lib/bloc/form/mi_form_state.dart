@@ -25,6 +25,9 @@ class MiFormState extends Equatable {
 
   @override
   List<Object> get props => [email, password, status];
+
+  @override
+  bool get stringify => true;
 }
 
 // class MiFormInitial extends MiFormState {
