@@ -41,33 +41,5 @@ class MiFormBloc extends Bloc<MiFormEvent, MiFormState> {
         yield state.copyWith(status: FormzStatus.submissionSuccess);
       }
     }
-
-    // else if (event is EmailUnfocusedEvent) {
-    //   final email = Email.dirty(state.email.value);
-    //   yield state.copyWith(
-    //     email: email,
-    //     status: Formz.validate([email, state.password]),
-    //   );
-    // } else if (event is PasswordUnfocusedEvent) {
-    //   final password = Password.dirty(state.password.value);
-    //   yield state.copyWith(
-    //     password: password,
-    //     status: Formz.validate([state.email, password]),
-    //   );
-    // }
-    // else if (event is FormSubmittedEvent) {
-    //   final email = Email.dirty(state.email.value);
-    //   final password = Password.dirty(state.password.value);
-    //   yield state.copyWith(
-    //     email: email,
-    //     password: password,
-    //     status: Formz.validate([email, password]),
-    //   );
-    //   if (state.status.isValidated) {
-    //     yield state.copyWith(status: FormzStatus.submissionInProgress);
-    //     await Future<void>.delayed(const Duration(seconds: 3));
-    //     yield state.copyWith(status: FormzStatus.submissionSuccess);
-    //   }
-    // }
   }
 }
